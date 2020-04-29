@@ -11,4 +11,4 @@ def checkout(items):
   if items == 'D':
     return 15
 
-  return 0;
+  return 0

@@ -1,0 +1,7 @@
+[MESSAGES CONTROL]
+
+disable=missing-docstring
+
+[FORMAT]
+
+indent-string='  '
