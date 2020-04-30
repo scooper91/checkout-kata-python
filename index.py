@@ -8,14 +8,21 @@ _items = {
 def checkout(items):
   total = 0
   a_count = 0
+  b_count = 0
 
   for item in items:
     if item == 'A':
       a_count += 1
 
+    if item == 'B':
+      b_count += 1
+
     total += _items[item]
 
   a_discount = (a_count // 3) * 20
   total -= a_discount
+
+  if b_count >= 2:
+    total -= 15
 
   return total
