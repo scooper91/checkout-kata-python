@@ -1,16 +1,12 @@
+import pytest
 from index import checkout
 
 def test_empty_basket_returns_0():
   assert checkout('') == 0
 
-def test_single_a_returns_50():
-  assert checkout('A') == 50
+single_items = [['A', 50], ['B', 30], ['C', 20], ['D', 15]]
 
-def test_single_b_returns_30():
-  assert checkout('B') == 30
-
-def test_single_c_returns_20():
-  assert checkout('C') == 20
-
-def test_single_d_returns_15():
-  assert checkout('D') == 15
+@pytest.mark.parametrize('item_price', single_items)
+def test_single_item_returns_price(item_price):
+  item, price = item_price
+  assert checkout(item) == price
