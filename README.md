@@ -1,5 +1,7 @@
 # Checkout Kata - Python
 
+![Test](https://github.com/scooper91/checkout-kata-python/workflows/Test/badge.svg)
+
 Simple kata to get the overall cost of a basket given items.
 
 ## Requirements
