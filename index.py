@@ -6,4 +6,9 @@ _items = {
     }
 
 def checkout(items):
-  return _items.get(items, 0)
+  total = 0
+
+  for item in items:
+    total += _items[item]
+
+  return total
