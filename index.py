@@ -15,7 +15,7 @@ def checkout(items):
 
     total += _items[item]
 
-  if a_count >= 3:
-    total -= 20
+  a_discount = (a_count // 3) * 20
+  total -= a_discount
 
   return total
