@@ -17,3 +17,10 @@ multiple_items = [['ABCDA', 165], ['CBA', 100], ['DABCC', 135]]
 def test_multiple_items_returns_total_price(multiple_item_price):
   items, total = multiple_item_price
   assert checkout(items) == total
+
+single_a_discount_items = [['AAA', 130], ['ABACAD', 195], ['AAAA', 180]]
+
+@pytest.mark.parametrize('items_total', single_a_discount_items)
+def test_returns_total_price_with_one_a_discount(items_total):
+  items, total = items_total
+  assert checkout(items) == total
